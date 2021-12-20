@@ -1,1 +1,88 @@
+div.yellow{ 
+    width: 100%;
+    height: 150px;
+    background-color: yellow;
+    margin: 20px;
+}
+div.blue{
+    width: 100%;
+    height: 150px;
+    background-color: blue;
+    margin: 20px;
+}
+div.red{
+    width: 100%;
+    background-color: red;
+    height: 350px;
+    margin: 20px;
+}
+#red_container{
+    display: grid;
+    grid-template-rows: 1fx;
+    grid-gap: 1em;
+}
+#Yellow_container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2,150px);
+    grid-gap: 1em;
+}
+#blue_container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3,150px);
+    grid-gap: 1em;
+}
+#container{
+    display: grid;
+    grid-gap: 1em;
+}
+@media only screen and  (min-width:320px) and (max-width:767px){
+    #Yellow_container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2,150px);
+        grid-gap: 1em;
+    }
+    #blue_container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3,150px);
+        grid-gap: 1em;
+    }
+}
 
+@media only screen and (min-width:768px) and (max-width:1023px){
+    div.yellow{ 
+        height: 300px;
+        background-color: yellow;
+        margin: 20px;
+    }
+    #Yellow_container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1em;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    div.yellow{ 
+        height: 300px;
+        background-color: yellow;
+        margin: 20px;
+    }
+    #Yellow_container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1em;
+    }
+    div.blue{
+        height: 300px;
+        margin: 20px;
+    }
+    #blue_container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1em;
+    }
+}
